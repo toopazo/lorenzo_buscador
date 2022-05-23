@@ -93,5 +93,11 @@ python url_search.py \
 --patterns 2019 .pdf --outfile output_2019_pdf.txt
 ```
 Esto produce archivos de texto con los enlaces que buscamos. 
-Fin.
+
+## Paso 3: Descargar los ```pdf``` y procesarlos
+
+Acá debemos descargar los archivos ```pdf``` y leerlos con un OCR en busqueda 
+de ```Juan Perez```
+
+En desarrollo ..
 
