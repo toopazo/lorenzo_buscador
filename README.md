@@ -3,19 +3,20 @@ Programa en python diseñado para buscar palabras clave en documentos pdf
 dentro de una pagina web. 
 
 ## ¿Que problema estamos resolviendo?
-El sitio web ```https://corplascondes.cl``` contiene, entre otras cosas, los 
-todos contratos efectuados con terceras partes por conceptos de su operación 
+El sitio web ```https://corplascondes.cl``` contiene -entre otras cosas- todos 
+los contratos efectuados con terceras partes por conceptos de su operación 
 como corporación municipal. 
 
 Un ejemplo de contrato se puede ver en el enlace:
 ```https://corplascondes.cl/contenidos/transparencia/ley_de_transparencia/2020/08agosto/compras-adquisiciones/T-152-B-2020.pdf```
 
-Si quisieramos saber todos los contratos asociados a una determinada persona 
-```Juan Perez``` deberiamos revisar manualmente cada año y cada link. Esto es 
-claramente imposible. 
+Si quisieramos obtener todos los contratos asociados a una determinada persona
+llamada```Juan Perez``` deberiamos revisar manualmente cada año y cada link. 
+Esto es claramente imposible. 
 
-Este software buscada cada uno de las url dentro del sitio principal y busca 
-los archivos con formato ```pdf``` que contengan el nombre de ```Juan Perez```  
+El software en este repositorio busca obtener las url dentro de un sitio principal 
+y obtener los archivos con formato ```pdf``` que contengan el nombre de 
+```Juan Perez```  
 
 ## Paso 1: Obtener todas las url de interes
 Esta parte esta 100% basada en la instrucciones de 
