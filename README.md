@@ -96,7 +96,7 @@ Esto produce archivos de texto con los enlaces que buscamos.
 
 ## Paso 3: Descargar los ```pdf``` y procesarlos
 
-Acá debemos descargar los archivos ```pdf``` y leerlos con un OCR en busqueda 
+Finalmente debemos descargar los archivos ```pdf``` y leerlos con un OCR en busqueda 
 de ```Juan Perez```
 
 En desarrollo ..
