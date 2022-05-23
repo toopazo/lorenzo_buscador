@@ -3,6 +3,8 @@ Programa en python diseñado para buscar palabras clave en documentos pdf
 dentro de una pagina web. 
 
 ## ¿Que problema estamos resolviendo?
+Para responder a esta pregunta usaremos el siguiente ejemplo.
+
 El sitio web ```https://corplascondes.cl``` contiene -entre otras cosas- todos 
 los contratos efectuados con terceras partes por conceptos de su operación 
 como corporación municipal. 
@@ -14,7 +16,7 @@ Si quisieramos obtener todos los contratos asociados a una determinada persona
 llamada```Juan Perez``` deberiamos revisar manualmente cada año y cada link. 
 Esto es claramente imposible. 
 
-Siguiendo con el ejemplo, el software en este repositorio busca obtener todos 
+El software en este repositorio busca obtener todos 
 los archivos con formato ```pdf``` que contengan el nombre de ```Juan Perez``` 
 y que esten dentro del sitio web 
 ```https://corplascondes.cl/contenidos/transparencia/ley_de_transparencia/```
