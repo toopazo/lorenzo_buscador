@@ -16,7 +16,7 @@ Esto es claramente imposible.
 
 Siguiendo con el ejemplo, el software en este repositorio busca obtener todos 
 los archivos con formato ```pdf``` que contengan el nombre de ```Juan Perez``` 
-y que esten dentro de un determinado sitio web 
+y que esten dentro del sitio web 
 ```https://corplascondes.cl/contenidos/transparencia/ley_de_transparencia/```
 
 ## Paso 1: Obtener todas las url de interes
