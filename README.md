@@ -14,9 +14,10 @@ Si quisieramos obtener todos los contratos asociados a una determinada persona
 llamada```Juan Perez``` deberiamos revisar manualmente cada año y cada link. 
 Esto es claramente imposible. 
 
-El software en este repositorio busca obtener las url dentro de un sitio principal 
-y obtener los archivos con formato ```pdf``` que contengan el nombre de 
-```Juan Perez```  
+Siguiendo con el ejemplo, el software en este repositorio busca obtener todos 
+los archivos con formato ```pdf``` que contengan el nombre de ```Juan Perez``` 
+y que esten dentro de un determinado sitio web 
+```https://corplascondes.cl/contenidos/transparencia/ley_de_transparencia/```
 
 ## Paso 1: Obtener todas las url de interes
 Esta parte esta 100% basada en la instrucciones de 
