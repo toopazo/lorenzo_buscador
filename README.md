@@ -1,5 +1,5 @@
 # lorenzo_buscador
-Programa (Python) para buscar palabras clave en documentos pdf dentro de 
+Programa (Python) para buscar palabras clave en documentos ```pdf``` dentro de 
 un sitio web. 
 
 ## ¿Qué problema resuelve este repositorio?
@@ -120,6 +120,6 @@ El módulo usado para todo esto es ```url_process.py```, se ejecuta usando
 python url_process.py --urlfile output_2022_pdf.txt  --patterns plataforma nube --outfile output_2022_ocr.txt
 ```
 Donde los términos ```plataforma``` y ```nube``` (siempre en minúscula) serán 
-buscados dentro de cada pdf. El resultado se guarda en el archivo 
+buscados dentro de cada ```pdf```. El resultado se guarda en el archivo 
 ```output_2021_ocr.txt```
 
