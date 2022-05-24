@@ -29,7 +29,7 @@ https://corplascondes.cl/contenidos/transparencia/ley_de_transparencia/aaa/bbb.p
 https://corplascondes.cl/contenidos/transparencia/ley_de_transparencia/xxx/yyy/zzz.pdf
 ```
 
-## Paso 0: Instalar dependencias
+## Paso 1: Instalar dependencias
 
 Para instalar las dependencias y crear un entorno virtual se debe ejecutar
 ```bash
@@ -48,7 +48,7 @@ pip install bs4
 pip install requests
 ```
 
-## Paso 1: Obtener todas las url de interés
+## Paso 2: Obtener todas las url de interés
 
 Esta parte está 100% basada en las instrucciones de 
 https://www.scrapingbee.com/blog/crawling-python/ para usar Scrapy. Un respaldo
@@ -94,7 +94,7 @@ scrapy crawl corplascondes --logfile corplascondes.log -o corplascondes.jl -t js
 Esto creará el archivo ```spiders/corplascondes.log``` y ```spiders/corplascondes.jl```. El proceso toma unos 10 
 minutos
 
-## Paso 2: Refinar las url de interés
+## Paso 3: Refinar las url de interés
 
 Existe un problema con los resultados de Scrapy, usando la configuración de más
 arriba solo las url terminadas en ```.html``` son reportadas. Esto quiere decir
@@ -116,7 +116,7 @@ python url_search.py --baseurl https://www.corplascondes.cl/contenidos/transpare
 Esto produce un archivo de texto ```output_2020_pdf.txt``` con los enlaces 
 que buscamos. 
 
-## Paso 3: Descargar los ```pdf``` y procesarlos
+## Paso 4: Descargar los ```pdf``` y procesarlos
 
 Finalmente debemos descargar los archivos ```pdf``` y leerlos con la librería 
 ```PyPDF2``` en búsqueda de ```plataforma``` o ```nube```. Esto es en sí una tarea difícil 
@@ -133,7 +133,7 @@ buscados dentro de cada ```pdf```. Si alguno de ellos está presente el enlace
 respectivo se guardará en el archivo ```output_2020_ocr.txt```. Este proceso 
 toma entre 1 a 15 minutos dependiendo de la cantidad de enlaces a revisar.
 
-## Paso 4: Automatizar todo lo anterior
+## Paso 5: Automatizar todo lo anterior
 El archivo ```batch_process.sh``` contiene un ejemplo con el uso de todos los 
 comandos anteriores. 
 
