@@ -121,5 +121,5 @@ python url_process.py --urlfile output_2020_pdf.txt  --patterns plataforma nube 
 ```
 Donde los términos ```plataforma``` y ```nube``` (siempre en minúscula) serán 
 buscados dentro de cada ```pdf```. El resultado se guarda en el archivo 
-```output_2021_ocr.txt```
+```output_2020_ocr.txt```
 
