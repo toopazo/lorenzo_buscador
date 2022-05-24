@@ -94,31 +94,31 @@ que los archivos ```pdf``` del tipo
 https://www.corplascondes.cl/contenidos/transparencia/ley_de_transparencia/2020/06junio/compras-adquisiciones/plantilla_contrataciones_a_terceros.pdf
 https://www.corplascondes.cl/contenidos/transparencia/ley_de_transparencia/2020/06junio/compras-adquisiciones/T-141-2020.pdf
 ```
-no serán detectados. Esto no es bueno
+no son detectados. Esto es un problema.
 
-Por ello tuve que usar las librería ```request``` y ```bs4```. En particular el 
-módulo ```url_search.py``` se encarga de leer el log producido por el Scrapy
-y generar la lista de links que son subconjunto exclusivo y que además cumplan 
-tener otros patrones en su url
+Por ello tuve que usar las librerías ```request``` y ```bs4```. En particular el 
+módulo ```url_search.py``` se encarga de leer el log producido por Scrapy
+y generar la lista de url que son subconjunto exclusivo y que además cumplan 
+tener otros patrones
 ```commandline
-python url_search.py --baseurl \ 
-https://www.corplascondes.cl/contenidos/transparencia/ley_de_transparencia/ \
---scrapy_log scrapy_crawler/scrapy_crawler/spiders/corplascondes.log \
---patterns 2019 .pdf --outfile output_2019_pdf.txt
+python url_search.py --baseurl https://www.corplascondes.cl/contenidos/transparencia/ley_de_transparencia/ --scrapyjl scrapy_crawler/scrapy_crawler/spiders/corplascondes.jl  --patterns 2022 .pdf --outfile output_2022_pdf.txt
 ```
-Esto produce archivos de texto con los enlaces que buscamos. 
+Esto produce un archivo de texto ```output_2022_pdf.txt``` con los enlaces 
+que buscamos. 
 
-## Paso 3: Descargar los ```pdf``` y procesarlos
+## Paso 3: Descargar los ```pdf``` y procesarlas
 
-Finalmente debemos descargar los archivos ```pdf``` y leerlos con un OCR en busqueda 
-de ```Juan Perez```
+Finalmente debemos descargar los archivos ```pdf``` y leerlos con la librería 
+```PyPDF2``` en búsqueda de ```Juan Perez```. Esto es en sí una tarea difícil 
+dentro del mundo de la programación. El metodo más simple y efectivo que probé 
+fue convertir todo el texto leído por el OCR a minúsculas y quitar los espacios
+en blanco.
 
-El modulo usado es ```url_process.py```, se ejecuta usando
+El módulo usado para todo esto es ```url_process.py```, se ejecuta usando
 ```commandline
-python url_process.py --urlfile output_2021_pdf.txt  \
---patterns plataforma nube --outfile output_2021_ocr.txt
+python url_process.py --urlfile output_2022_pdf.txt  --patterns plataforma nube --outfile output_2022_ocr.txt
 ```
-Donde los terminos ```plataforma``` y ```nube``` serán buscados por el OCR 
-dentro de cada pdf. El resultado se guarda en el archivo 
-```output_2021_ocr.txt``` 
+Donde los términos ```plataforma``` y ```nube``` (siempre en minúscula) serán 
+buscados dentro de cada pdf. El resultado se guarda en el archivo 
+```output_2021_ocr.txt```
 
