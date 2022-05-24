@@ -53,8 +53,8 @@ scrapy startproject scrapy_crawler
 ```
 Al ejecutar este comando la respuesta debería ser similar a la siguiente
 ```
-New Scrapy project 'scrapy_crawler', using template directory '/home/tzo4/Dropbox/tomas/trabajosVarios/lorenzo_buscador/venv/lib/python3.9/site-packages/scrapy/templates/project', created in:
-    /home/tzo4/Dropbox/tomas/trabajosVarios/lorenzo_buscador/scrapy_crawler
+New Scrapy project 'scrapy_crawler', using template directory 'lorenzo_buscador/venv/lib/python3.9/site-packages/scrapy/templates/project', created in:
+    lorenzo_buscador/scrapy_crawler
 
 You can start your first spider with:
     cd scrapy_crawler
