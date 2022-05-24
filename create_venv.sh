@@ -11,6 +11,10 @@ python_ver=$(./create_venv.py --pver); ${python_ver} -m venv venv
 source venv/bin/activate
 
 # Install libraries
+pip install scrapy
+pip install extruct
+pip install jsonlines
+pip install wget
+pip install PyPDF2
 pip install bs4
 pip install requests
-pip install scrapy
