@@ -40,8 +40,8 @@ class UrlProcess:
         os.remove(filename)
 
         if result:
-            # return {'url': url, 'result': True}
-            return f"{url},{result}\n"
+            # return f"{url},{result}\n"
+            return f"{url}\n"
         else:
             return ''
 
@@ -77,11 +77,11 @@ class UrlProcess:
             # if 'cecilia' in text:
             #     print('bingooooooooo')
 
-            # Check if all patterns are present in the text
-            all_good = True
+            # Check if any of the patterns are present in the text
+            all_good = False
             for pattern in patterns:
-                if pattern not in text:
-                    all_good = False
+                if pattern in text:
+                    all_good = True
             if all_good:
                 return True
 
