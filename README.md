@@ -102,9 +102,9 @@ módulo ```url_search.py``` se encarga de leer el log producido por Scrapy
 y generar la lista de url que son subconjunto exclusivo y que además cumplan 
 tener otros patrones
 ```commandline
-python url_search.py --baseurl https://www.corplascondes.cl/contenidos/transparencia/ley_de_transparencia/ --scrapyjl scrapy_crawler/scrapy_crawler/spiders/corplascondes.jl  --patterns 2022 .pdf --outfile output_2022_pdf.txt
+python url_search.py --baseurl https://www.corplascondes.cl/contenidos/transparencia/ley_de_transparencia/ --scrapyjl scrapy_crawler/scrapy_crawler/spiders/corplascondes.jl  --patterns 2020 .pdf --outfile output_2020_pdf.txt
 ```
-Esto produce un archivo de texto ```output_2022_pdf.txt``` con los enlaces 
+Esto produce un archivo de texto ```output_2020_pdf.txt``` con los enlaces 
 que buscamos. 
 
 ## Paso 3: Descargar los ```pdf``` y procesarlas
@@ -117,7 +117,7 @@ en blanco.
 
 El módulo usado para todo esto es ```url_process.py```, se ejecuta usando
 ```commandline
-python url_process.py --urlfile output_2022_pdf.txt  --patterns plataforma nube --outfile output_2022_ocr.txt
+python url_process.py --urlfile output_2020_pdf.txt  --patterns plataforma nube --outfile output_2020_ocr.txt
 ```
 Donde los términos ```plataforma``` y ```nube``` (siempre en minúscula) serán 
 buscados dentro de cada ```pdf```. El resultado se guarda en el archivo 
