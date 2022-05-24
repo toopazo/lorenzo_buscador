@@ -100,7 +100,7 @@ no son detectados. Esto es un problema.
 Por ello tuve que usar las librerías ```request``` y ```bs4```. En particular el 
 módulo ```url_search.py``` se encarga de leer el log producido por Scrapy
 y generar la lista de url que son subconjunto exclusivo y que además cumplan 
-tener otros patrones como los términos ```2020`` y ```.pdf``` en el ejemplo de
+tener otros patrones como los términos ```2020``` y ```.pdf``` en el ejemplo de
 más abajo
 ```commandline
 python url_search.py --baseurl https://www.corplascondes.cl/contenidos/transparencia/ley_de_transparencia/ --scrapyjl scrapy_crawler/scrapy_crawler/spiders/corplascondes.jl  --patterns 2020 .pdf --outfile output_2020_pdf.txt
