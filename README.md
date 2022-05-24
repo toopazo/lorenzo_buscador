@@ -60,7 +60,7 @@ You can start your first spider with:
     cd scrapy_crawler
     scrapy genspider example example.com
 ```
-Ahora nos dirijímos a la carpeta spider 
+Ahora nos movemos a la carpeta spider 
 ```
 cd scrapy_crawler/scrapy_crawler/spiders
 ```
@@ -79,14 +79,14 @@ class CorpLasCondesCrawler(CrawlSpider):
     start_urls = ['https://corplascondes.cl/contenidos/transparencia/ley_de_transparencia']
     rules = (Rule(LinkExtractor()),)
 ```
-Finalmente empezamos la busqueda con el comando
+Finalmente empezamos la búsqueda con el comando
 ```commandline
 scrapy crawl corplascondes --logfile corplascondes.log -o corplascondes.jl -t jsonlines
 ```
 Esto creará el archivo ```spiders/corplascondes.log``` y ```spiders/corplascondes.jl```. El proceso toma unos 10 
 minutos
 
-## Paso 2: Refinar las url de interes
+## Paso 2: Refinar las url de interés
 Existe un problema con los resultados de Scrapy, usando la configuración de más
 arriba solo las url terminadas en ```.html``` son reportadas. Esto quiere decir
 que los archivos ```pdf``` del tipo 
@@ -110,7 +110,7 @@ que buscamos.
 
 Finalmente debemos descargar los archivos ```pdf``` y leerlos con la librería 
 ```PyPDF2``` en búsqueda de ```Juan Perez```. Esto es en sí una tarea difícil 
-dentro del mundo de la programación. El metodo más simple y efectivo que probé 
+dentro del mundo de la programación. El método más simple y efectivo que probé 
 fue convertir todo el texto leído por el OCR a minúsculas y quitar los espacios
 en blanco.
 
