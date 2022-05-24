@@ -1,6 +1,6 @@
 # lorenzo_buscador
-Programa (Python) para buscar palabras clave en documentos ```pdf``` dentro de 
-una ```url```. 
+Programa (Python) para buscar palabras clave en documentos pdf dentro de 
+un sitio web. 
 
 ## ¿Qué problema resuelve este repositorio?
 Para responder a esta pregunta usaremos el siguiente ejemplo.
@@ -45,7 +45,8 @@ pip install requests
 ## Paso 1: Obtener todas las url de interés
 Esta parte está 100% basada en las instrucciones de 
 https://www.scrapingbee.com/blog/crawling-python/ para usar Scrapy. Un respaldo
-de la página web está disponible acá: 
+de la página web está disponible en: 
+https://raw.githubusercontent.com/toopazo/lorenzo_buscador/main/scrapingbee_crawling_python.pdf
 
 Para empezar a usar Scrapy debemos ir dentro de la carpeta ``lorenzo_bsucador`` ejecutamos
 ```commandline
